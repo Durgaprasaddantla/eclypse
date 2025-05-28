@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Premium Wireless Headphones",
+    "price": 299.99,
+    "image": "/images/headphones.jpg",
+    "rating": 4,
+    "category": "Electronics"
+  },
+  {
+    "id": 2,
+    "name": "Designer Sunglasses",
+    "price": 159.99,
+    "image": "/images/sunglasses.jpg",
+    "rating": 5,
+    "category": "Fashion"
+  }
+]

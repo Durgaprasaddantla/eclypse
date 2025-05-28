@@ -1,0 +1,80 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: "Inter", system-ui, sans-serif;
+  }
+
+  body {
+    @apply text-gray-100 antialiased;
+    background: linear-gradient(
+      135deg,
+      #32174d 0%,
+      /* Russian Violet */ #2a1051 25%,
+      /* Darker Russian Violet */ #1f1f47 50%,
+      /* Metropolis */ #16162e 75%,
+      /* Darker Metropolis */ #0a0a23 100% /* Night Shadow */
+    );
+    background-attachment: fixed;
+    background-size: 200% 200%;
+    min-height: 100vh;
+  }
+
+  a {
+    @apply text-indigo-300 hover:text-white transition-colors;
+  }
+
+  button {
+    @apply focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50;
+  }
+}
+
+@layer components {
+  .container-custom {
+    @apply max-w-6xl mx-auto px-4;
+  }
+
+  .btn-primary {
+    @apply bg-indigo-600 text-white px-4 py-2 hover:bg-indigo-700 transition-colors;
+  }
+
+  .btn-secondary {
+    @apply border border-indigo-400 text-indigo-300 py-3 hover:bg-indigo-700 hover:text-white transition-colors;
+  }
+
+  .card {
+    @apply bg-gray-900 bg-opacity-50 backdrop-blur-sm rounded-lg p-6 border border-indigo-900;
+  }
+}
+
+/* Add any custom styles below */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+#root {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Animation for subtle gradient movement */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 0%;
+  }
+  50% {
+    background-position: 100% 100%;
+  }
+  100% {
+    background-position: 0% 0%;
+  }
+}
+
+body {
+  animation: gradientShift 15s ease infinite;
+}
